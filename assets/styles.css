@@ -12,3 +12,13 @@ p {
     margin-left: 10px;
     margin-top: 10px;
 }
+
+#answerCard ul button {
+    margin-top: 5px;
+    margin-left:10px;
+    padding: 5px;
+}
+
+.hidden {
+    visibility: hidden;
+}

@@ -8,8 +8,35 @@
     <title>Coding Assessment</title>
 </head>
 <body>
-    <h1>Coding Assessment</h1>
-    <p>You will have x seconds to complete y questions. Each incorrect answer will reduce the timer by z seconds. Click on the button below to start.</p>
+    <container id = "startPage" class = "visible">
+        <h1>Coding Assessment</h1>
+        <p>You will have 60 seconds to complete 10 questions. Each incorrect answer will reduce the timer by 10 seconds. Click on the button below to start.</p>
+        <button id = "startButton"></button>
+    </container>
+
+    <container id = "questionFull" class = "hidden">
+        <h2>Coding Assessment</h2>
+        <div id = "timer">60</div>
+        <h3 id = "questionName"></h3>
+
+        <container id = "answerCard" >
+            <ul class = "answerButton">
+                
+            </ul>
+        </container>
+
+        <container id = "endscreenContainer" class = "hidden">
+            <h3>The quiz is over!</h3>
+                <p id = "score"></p>
+                <p>Please enter your initials below to be added to the high score board.</p>
+            <ul id = "pasthighscores"></ul>
+            <form id = "submitscore">
+                <label>Initials</label>
+                <input type = "text" name = "initials" id = "initials"/>
+                <button type = "submit">Submit</button>
+            </form>
+        </container>
+    </container>
     <script src = "./assets/scripts.js"></script>
 </body>
 </html>
