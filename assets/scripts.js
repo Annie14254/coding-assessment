@@ -38,7 +38,6 @@ function clearStartPage(){
 }
 
 // framework for questions
-// have each answer be a button, with an if else statement to determine if it is correct or not
 
 questionsArray = [ 
     {
@@ -63,6 +62,62 @@ questionsArray = [
         "True", "False"
         ],
         correctanswer: "False"
+    }
+    ,
+    {
+        name: "Which of the following is a semantic HTML tag?",
+        answers: [
+            "p", "div", "nav", "span"
+        ],
+        correctanswer: "nav"
+    }
+    ,
+    {
+        name: "What HTML tag does an alt attribute usually go on?",
+        answers: [
+            "h1", "img", "article", "container"
+        ],
+        correctanswer: "img"
+    }
+    ,
+    {
+        name: "It is generally considered best to only have one h1 tag. True or False?",
+        answers: [
+            "True", "False"
+        ],
+        correctanswer: "True"
+    }
+    ,
+    {
+        name: "Which of the following is correct for selecting an ID tag in CSS?",
+        answers: [
+            ".ID", "ID", "#ID", "_ID"
+        ],
+        correctanswer: "#ID"
+    }
+    ,
+    {
+        name: "An if-else statement needs both a and b to be true to execute a certain method. How would it be written in the if conditions?",
+        answers: [
+            "(a = true and b = true)", "(a === true & b === true)", "(a === true || b === true)", "(a === true && b === true)"
+        ],
+        correctanswer: "(a === true && b === true)"
+    }
+    ,
+    {
+        name: "Which of the following is NOT a valid input type for forms?",
+        answers: [
+            "Email", "Text", "Radio", "Static"
+        ],
+        correctanswer: "Static"
+    }
+    ,
+    {
+        name: "Which of the following changes text color in CSS?",
+        answers: [
+            "color", "font-color", "text-color", "script-color"
+        ],
+        correctanswer: "color"
     }
 ]
 
