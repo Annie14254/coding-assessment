@@ -12,17 +12,22 @@
         <h1>Coding Assessment</h1>
         <p>You will have 60 seconds to complete 10 questions. Each incorrect answer will reduce the timer by 10 seconds. Click on the button below to start.</p>
         <button id = "startButton"></button>
+        <button id = "skipHighScores"></button>
     </container>
 
     <container id = "questionFull" class = "hidden">
         <h2>Coding Assessment</h2>
-        <div id = "timer">60</div>
+        <container class = "timerbox">
+            <h3>Seconds Left:</h3>
+            <div id = "timer">60</div>
+        </container>
         <h3 id = "questionName"></h3>
 
         <container id = "answerCard" >
             <ul class = "answerButton">
                 
             </ul>
+            <p id = "answerMessage"></p>
         </container>
 
         <container id = "endscreenContainer" class = "hidden">

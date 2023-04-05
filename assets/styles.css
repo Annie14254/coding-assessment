@@ -5,11 +5,26 @@
 }
 
 h1 {
-    margin-left: 10px;
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: lightcoral;
+    color:white;
+    padding: 5px;
+    width: 20%;
+}
+
+h2 {
+    margin-left: 30px;
+    margin-top: 10px;
+    background-color: lightcoral;
+    color:white;
+    padding: 5px;
+    width: 20%;
+    font-size: 2em;
 }
 
 p {
-    margin-left: 10px;
+    margin-left: 30px;
     margin-top: 10px;
 }
 
@@ -21,4 +36,39 @@ p {
 
 .hidden {
     visibility: hidden;
+}
+
+#endscreenContainer h3 {
+    margin-left: 30px;
+    font-size: 25px;
+}
+
+#endscreenContainer ul li {
+    margin-left: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#submitscore label {
+    margin-top: 15px;
+    margin-left: 30px
+}
+
+.timerbox {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 120px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.answerButton {
+    margin-left: 30px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.answerButton button {
+    font-size: 25px;
+    width: 40%
 }
