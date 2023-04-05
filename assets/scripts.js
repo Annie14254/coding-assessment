@@ -11,8 +11,8 @@ var endScreen = document.querySelector("#endscreenContainer")
 var submitScoreForm = document.querySelector("#submitscore")
 var pastHighScores = document.querySelector("#pasthighscores")
 var showUserScore = document.querySelector("#score")
+var answerMessage = document.querySelector("#answerMessage")
 var countdown
-var quizInProgress
 var currentQuestion
 var questionCount = 0
 var arrayAnswers
@@ -24,7 +24,6 @@ startButton.setAttribute("style", "margin-left:10px; margin-top:10px; font-size:
 
 startButton.addEventListener("click", function(){
     clearStartPage();
-    quizInProgress = true;
     startTimer();
     displayQuestion();
 
@@ -129,7 +128,7 @@ function displayQuestion(){
     /*for (i = 0; i < questionsArray.length; i++){*/
         currentQuestion = questionsArray[questionCount]
         questionName.textContent = currentQuestion.name
-        questionName.setAttribute("style", "margin-left: 10px; padding: 5px")
+        questionName.setAttribute("style", "margin-left: 30px; padding: 5px")
 
         for(i = 0; i < currentQuestion.answers.length; i++){
 
@@ -149,14 +148,12 @@ function displayQuestion(){
 
 function correctAnswerCheck(answer) {
     if(answer === questionsArray[questionCount].correctanswer) {
-        console.log("correct")
         userScore += 1
-        // add print for correct/incorrect
-        // add ++ for correct or incorrect score
+        document.getElementById("answerMessage").innerHTML = "Correct!"
     } else {
-        console.log("incorrect")
         userScore -= 1
         timer.textContent = timer.textContent - 10
+        document.getElementById("answerMessage").innerHTML = "Incorrect..."
         if (timer.textContent <= 0) {
             clearInterval(countdown);
             endScreenShow();
@@ -166,6 +163,7 @@ function correctAnswerCheck(answer) {
     if (questionCount < questionsArray.length){
         displayQuestion();
     } else {
+        clearInterval(countdown);
         endScreenShow();
     }
 }
@@ -190,7 +188,7 @@ function startTimer() {
   function endScreenShow() {
 
     // hide questions, show end screen
-    questionFull.setAttribute("style", "visibility:hidden")
+    questionFull.setAttribute("style", "visibility:none")
     endScreen.setAttribute("style", "visibility:visible")
 
     // print user score
@@ -209,15 +207,18 @@ function startTimer() {
   }
 
   submitScoreForm.addEventListener("submit", function(event){
+
     event.preventDefault();
     var userInitials = document.getElementById("initials").value
-    console.log(userInitials)
+
     var highScores = JSON.parse(localStorage.getItem("highscores")) || []
     highScores.push({userInitials, userScore})
     localStorage.setItem("highscores",JSON.stringify(highScores))
+
     var li = document.createElement("li");
     li.textContent = userInitials + " : " + userScore
-    pastHighScores.appendChild(li)
+    pastHighScores.appendChild(li);
   })
-  // event listener for button answers
-  // clear ul with element.innerHTML = ''
+
+
+  
