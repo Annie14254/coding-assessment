@@ -6,26 +6,48 @@
 
 h1 {
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top: 200px;
     background-color: lightcoral;
     color:white;
     padding: 5px;
-    width: 20%;
+    width: 25%;
+    font-size: 2.5em
 }
 
 h2 {
     margin-left: 30px;
-    margin-top: 10px;
+    margin-top: 100px;
     background-color: lightcoral;
     color:white;
     padding: 5px;
-    width: 20%;
-    font-size: 2em;
+    width: 25%;
+    font-size: 2.5em;
 }
 
-p {
+#endscreenContainer p {
     margin-left: 30px;
     margin-top: 10px;
+    font-size: 20px;
+    background-color: bisque;
+    padding: 10px;
+    width: 70%
+}
+
+#startPage p {
+    margin-left: 30px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: bisque;
+    padding: 10px;
+    width: 70%
+}
+
+#questionFull p {
+    margin-left: 30px;
+    font-size: 25px;
+    margin-top: 10px;
+    padding: 10px;
+    width: 70%
 }
 
 #answerCard ul button {
@@ -39,6 +61,7 @@ p {
 }
 
 #endscreenContainer h3 {
+    margin-top: -200px;
     margin-left: 30px;
     font-size: 25px;
 }
@@ -47,19 +70,57 @@ p {
     margin-left: 60px;
     margin-top: 10px;
     margin-bottom: 10px;
+    font-size: 25px;
+    list-style-type: none;
+    background-color:rgb(212, 212, 212);
+    padding: 3px;
+    width: 8%
+}
+
+#submitscore  {
+    margin-top: 50px;
+}
+
+#submitscore button {
+    padding: 5px;
+    font-size: 20px;
 }
 
 #submitscore label {
     margin-top: 15px;
-    margin-left: 30px
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+#submitscore button {
+    padding: 5px;
+    font-size: 20px;
+}
+
+#submitscore input {
+    padding: 5px;
+    font-size: 20px;
+}
+
+#highscoreheader {
+    display: block;
+    margin-top: 30px;
+    padding: 5px;
+    background-color: lightcoral;
+    width: 20%;
+    color: white;
+    font-size: 35px;
+    margin-left: 55px;
 }
 
 .timerbox {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 120px;
+    position: absolute;
+    right: 0;
+    margin-right: 40px;
     font-size: 20px;
     padding: 5px;
+    background-color: lightcoral;
+    color: white
 }
 
 .answerButton {
@@ -71,4 +132,18 @@ p {
 .answerButton button {
     font-size: 25px;
     width: 40%
+}
+
+button {
+    background-color: #a3383c;
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background-color: #b73e42;
+}
+
+button:active {
+    background-color: #7a2427;
 }

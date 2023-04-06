@@ -10,7 +10,8 @@
 <body>
     <container id = "startPage" class = "visible">
         <h1>Coding Assessment</h1>
-        <p>You will have 60 seconds to complete 10 questions. Each incorrect answer will reduce the timer by 10 seconds. Click on the button below to start.</p>
+        <p>This is a coding quiz, covering topics on HTML, CSS, and JavaScript. <br>
+            You will have 60 seconds to complete 10 questions. Each incorrect answer will reduce the timer by 10 seconds. Click on the button below to start!</p>
         <button id = "startButton"></button>
         <button id = "skipHighScores"></button>
     </container>
@@ -18,7 +19,7 @@
     <container id = "questionFull" class = "hidden">
         <h2>Coding Assessment</h2>
         <container class = "timerbox">
-            <h3>Seconds Left:</h3>
+            <h3>Time Left:</h3>
             <div id = "timer">60</div>
         </container>
         <h3 id = "questionName"></h3>
@@ -33,12 +34,14 @@
         <container id = "endscreenContainer" class = "hidden">
             <h3>The quiz is over!</h3>
                 <p id = "score"></p>
-                <p>Please enter your initials below to be added to the high score board.</p>
+                <p>Please enter your initials below to be added to the high score board.<br></p>
+                <label id = "highscoreheader">High Scores</label>
             <ul id = "pasthighscores"></ul>
             <form id = "submitscore">
                 <label>Initials</label>
                 <input type = "text" name = "initials" id = "initials"/>
                 <button type = "submit">Submit</button>
+                <button type = "reset" id = "startScreen" onClick = "window.location.reload()">Start Over</button>
             </form>
         </container>
     </container>
