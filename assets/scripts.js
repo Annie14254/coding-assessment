@@ -12,6 +12,7 @@ var submitScoreForm = document.querySelector("#submitscore")
 var pastHighScores = document.querySelector("#pasthighscores")
 var showUserScore = document.querySelector("#score")
 var answerMessage = document.querySelector("#answerMessage")
+var startScreenButton = document.querySelector("#startScreen")
 var countdown
 var currentQuestion
 var questionCount = 0
@@ -20,7 +21,7 @@ var userScore = 0
 
 //creating button to start, add event listener
 startButton.textContent = "Start"
-startButton.setAttribute("style", "margin-left:10px; margin-top:10px; font-size: 25px; padding: 2px;")
+startButton.setAttribute("style", "margin-left:30px; margin-top:10px; font-size: 30px; padding: 7px;")
 
 startButton.addEventListener("click", function(){
     clearStartPage();
@@ -128,7 +129,7 @@ function displayQuestion(){
     /*for (i = 0; i < questionsArray.length; i++){*/
         currentQuestion = questionsArray[questionCount]
         questionName.textContent = currentQuestion.name
-        questionName.setAttribute("style", "margin-left: 30px; padding: 5px")
+        questionName.setAttribute("style", "margin-left: 30px; margin-top: 20px; padding: 5px; font-size: 25px; margin-bottom: 5px; background-color: #ffdeb4;width:50%")
 
         for(i = 0; i < currentQuestion.answers.length; i++){
 
@@ -168,6 +169,7 @@ function correctAnswerCheck(answer) {
     }
 }
 
+timer.setAttribute("style", "font-size: 35px; text-align: center")
 
 // create timer
 // TODO: *add endgame*
@@ -218,7 +220,19 @@ function startTimer() {
     var li = document.createElement("li");
     li.textContent = userInitials + " : " + userScore
     pastHighScores.appendChild(li);
+  }
+
+  )
+
+  // add return to start button
+  // I tried to get it to loop manually but for now I could only get it to refresh the page to restart
+  // the window.location.reload snippet was taken from stack overflow
+
+  /*startScreenButton.addEventListener("click", function(){
+    returnStart();
   })
 
-
-  
+  function returnStart() {
+    window.location.reload();
+  }
+  */
