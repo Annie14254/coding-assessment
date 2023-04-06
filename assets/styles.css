@@ -138,6 +138,7 @@ button {
     background-color: #a3383c;
     color: white;
     border: none;
+    border-radius: 10px;
 }
 
 button:hover {
