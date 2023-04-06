@@ -7,7 +7,7 @@ A coding quiz that was largely created using JavaScript. The quiz is timed with 
 N/A
 
 ## Deployed Page
-<img src = "./assets/images/deployedpage.png alt = "An image of the deployed code quiz">
+<img src = "./assets/images/deployedpage.png" alt = "An image of the deployed code quiz"/>
 
 ## Usage
 Access the deployed site at https://annie14254.github.io/coding-assessment/. Click on the "Start" button to start the quiz. Clicking on any of the answers to each question will advance to the next question.
